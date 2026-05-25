@@ -2,6 +2,21 @@
 .SYNOPSIS
 Windows 11 DISA STIG Batch Remediation Script
 
+.NOTES
+    Author          : Saeed Hersi
+    LinkedIn        : https://www.linkedin.com/in/saeed-hersi-719537201/
+    GitHub          : github.com/960hersi
+    Date Created    : 2026-05-24
+    Last Modified   : 2026-05-25
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+
+.TESTED ON
+    Date(s) Tested  : 2026-05-24
+    Tested By       : Saeed Hersi
+    Systems Tested  : Windows 11
+
 .DESCRIPTION
 Remediates 10 selected Windows 11 DISA STIG findings using PowerShell.
 Each section includes the STIG ID, purpose, and remediation action.
