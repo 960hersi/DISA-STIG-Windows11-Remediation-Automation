@@ -1,0 +1,145 @@
+<#
+.SYNOPSIS
+Windows 11 DISA STIG Batch Remediation Script
+
+.DESCRIPTION
+Remediates 10 selected Windows 11 DISA STIG findings using PowerShell.
+Each section includes the STIG ID, purpose, and remediation action.
+
+.NOTES
+Run as Administrator.
+#>
+
+Write-Host "Starting Windows 11 STIG batch remediation..."
+
+function Set-RegDword {
+    param (
+        [string]$Path,
+        [string]$Name,
+        [int]$Value
+    )
+
+    if (-not (Test-Path $Path)) {
+        New-Item -Path $Path -Force | Out-Null
+    }
+
+    New-ItemProperty -Path $Path -Name $Name -Value $Value -PropertyType DWord -Force | Out-Null
+    Write-Host "Configured: $Path\$Name = $Value"
+}
+
+# =========================================================
+# WN11-AU-000500
+# Application event log size must be 32768 KB or greater
+# =========================================================
+Set-RegDword `
+    -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\Application" `
+    -Name "MaxSize" `
+    -Value 32768
+
+
+# =========================================================
+# WN11-AU-000505
+# Security event log size must contain at least one week of audit records
+# Set to 4194240 KB, approximately 4 GB
+# =========================================================
+Set-RegDword `
+    -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\Security" `
+    -Name "MaxSize" `
+    -Value 4194240
+
+
+# =========================================================
+# WN11-AU-000510
+# System event log size must be 32768 KB or greater
+# =========================================================
+Set-RegDword `
+    -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\System" `
+    -Name "MaxSize" `
+    -Value 32768
+
+
+# =========================================================
+# WN11-AU-000005
+# Audit Credential Validation failures
+# =========================================================
+auditpol /set /subcategory:"Credential Validation" /failure:enable
+
+
+# =========================================================
+# WN11-AU-000010
+# Audit Credential Validation successes
+# =========================================================
+auditpol /set /subcategory:"Credential Validation" /success:enable
+
+
+# =========================================================
+# WN11-CC-000038
+# Disable WDigest Authentication
+# =========================================================
+Set-RegDword `
+    -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest" `
+    -Name "UseLogonCredential" `
+    -Value 0
+
+
+# =========================================================
+# WN11-CC-000039
+# Remove "Run as different user" from context menus
+# =========================================================
+$RunAsPaths = @(
+    "HKLM:\SOFTWARE\Classes\batfile\shell\runasuser",
+    "HKLM:\SOFTWARE\Classes\cmdfile\shell\runasuser",
+    "HKLM:\SOFTWARE\Classes\exefile\shell\runasuser",
+    "HKLM:\SOFTWARE\Classes\mscfile\shell\runasuser"
+)
+
+foreach ($Path in $RunAsPaths) {
+    Set-RegDword `
+        -Path $Path `
+        -Name "SuppressionPolicy" `
+        -Value 4096
+}
+
+
+# =========================================================
+# WN11-CC-000085
+# Configure Early Launch Antimalware driver initialization
+# =========================================================
+Set-RegDword `
+    -Path "HKLM:\SYSTEM\CurrentControlSet\Policies\EarlyLaunch" `
+    -Name "DriverLoadPolicy" `
+    -Value 3
+
+
+# =========================================================
+# WN11-SO-000025
+# Rename built-in Guest account
+# =========================================================
+$GuestAccount = Get-LocalUser | Where-Object { $_.SID -like "*-501" }
+
+if ($GuestAccount -and $GuestAccount.Name -eq "Guest") {
+    Rename-LocalUser -Name "Guest" -NewName "Guest_DISABLED"
+    Write-Host "Renamed Guest account to Guest_DISABLED"
+} else {
+    Write-Host "Guest account already renamed or not found."
+}
+
+
+# =========================================================
+# WN11-SO-000030
+# Force audit policy subcategory settings to override legacy audit policy
+# =========================================================
+Set-RegDword `
+    -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa" `
+    -Name "SCENoApplyLegacyAuditPolicy" `
+    -Value 1
+
+
+# =========================================================
+# Apply Group Policy Updates
+# =========================================================
+Write-Host "Applying Group Policy update..."
+gpupdate /force
+
+Write-Host "Windows 11 STIG batch remediation complete."
+Write-Host "Restart the system, then rerun the Tenable scan."
