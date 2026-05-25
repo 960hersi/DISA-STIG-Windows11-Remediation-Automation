@@ -1,7 +1,5 @@
 # DISA-STIG-Windows11-Remediation-Automation
 
-# DISA-STIG-Windows11-Remediation-Automation
-
 ## Defense Information Systems Agency - Security Technical Implementation Guides (DISA STIGs)
 
 ### Windows 11 STIG Batch Remediation Assessment
@@ -65,8 +63,6 @@ The following Windows 11 DISA STIG findings were identified and remediated:
 
 The baseline Windows 11 DISA STIG scan was conducted using Tenable Vulnerability Management.
 
-![Initial Scan Results](images/DISASTIG.png)
-
 ---
 
 # Individual STIG Findings
@@ -75,7 +71,7 @@ The baseline Windows 11 DISA STIG scan was conducted using Tenable Vulnerability
 
 Application event log size compliance failure.
 
-![WN11-AU-000500](images/WN11-AU-000500.png)
+<img width="1907" height="708" alt="WN11-AU-000500" src="https://github.com/user-attachments/assets/34358763-0d4a-426a-9281-440123f63973" />
 
 ---
 
@@ -83,7 +79,7 @@ Application event log size compliance failure.
 
 Security event log size compliance failure.
 
-![WN11-AU-000505](images/WN11-AU-000505.png)
+<img width="1918" height="650" alt="WN11-AU-000505" src="https://github.com/user-attachments/assets/0e240064-00f8-4e7e-853b-a497d54acc3c" />
 
 ---
 
@@ -91,7 +87,7 @@ Security event log size compliance failure.
 
 System event log size compliance failure.
 
-![WN11-AU-000510](images/WN11-AU-000510.png)
+<img width="1919" height="661" alt="WN11-AU-000510" src="https://github.com/user-attachments/assets/16610385-d34e-4f7a-82b6-8fc2e574367c" />
 
 ---
 
@@ -99,7 +95,7 @@ System event log size compliance failure.
 
 Audit Credential Validation failures compliance finding.
 
-![WN11-AU-000005](images/WN11-AU-000005.png)
+<img width="1916" height="618" alt="WN11-AU-000005" src="https://github.com/user-attachments/assets/1b932622-bc53-4a05-ad5b-6c36dc445d12" />
 
 ---
 
@@ -107,7 +103,7 @@ Audit Credential Validation failures compliance finding.
 
 Audit Credential Validation successes compliance finding.
 
-![WN11-AU-000010](images/WN11-AU-000010.png)
+<img width="1919" height="646" alt="WN11-AU-000010" src="https://github.com/user-attachments/assets/b865a29e-38bd-453d-a337-c383cf74b7dc" />
 
 ---
 
@@ -115,7 +111,7 @@ Audit Credential Validation successes compliance finding.
 
 WDigest Authentication compliance finding.
 
-![WN11-CC-000038](images/WN11-CC-000038.png)
+<img width="1919" height="631" alt="WN11-CC-000038" src="https://github.com/user-attachments/assets/d38690dd-1137-4ab1-b508-40db4d5c0574" />
 
 ---
 
@@ -123,7 +119,7 @@ WDigest Authentication compliance finding.
 
 Run as different user context menu compliance finding.
 
-![WN11-CC-000039](images/WN11-CC-000039.png)
+<img width="1919" height="623" alt="WN11-CC-000039" src="https://github.com/user-attachments/assets/e379e4b1-b7d9-4084-b881-11b38a53ab8d" />
 
 ---
 
@@ -131,7 +127,7 @@ Run as different user context menu compliance finding.
 
 Early Launch Antimalware Boot-Start Driver Initialization Policy compliance finding.
 
-![WN11-CC-000085](images/WN11-CC-000085.png)
+<img width="1919" height="661" alt="WN11-CC-000085" src="https://github.com/user-attachments/assets/862f55c0-1645-40b4-aaa1-d8bac81fec91" />
 
 ---
 
@@ -139,7 +135,7 @@ Early Launch Antimalware Boot-Start Driver Initialization Policy compliance find
 
 Guest account rename compliance finding.
 
-![WN11-SO-000025](images/WN11-SO-000025.png)
+<img width="1919" height="652" alt="WN11-SO-000025" src="https://github.com/user-attachments/assets/13489acc-c4f8-4513-9ebc-6af14cc3b66c" />
 
 ---
 
@@ -147,7 +143,7 @@ Guest account rename compliance finding.
 
 Audit policy subcategory compliance finding.
 
-![WN11-SO-000030](images/WN11-SO-000030.png)
+<img width="1918" height="643" alt="WN11-SO-000030" src="https://github.com/user-attachments/assets/4dadfa0b-58b4-458b-acac-b8eb0ff6a1ef" />
 
 ---
 
@@ -204,6 +200,8 @@ The assessment successfully demonstrated:
 * Registry-based hardening
 * Audit policy configuration
 * Compliance validation using Tenable
+
+<img width="1917" height="916" alt="DISASTIG" src="https://github.com/user-attachments/assets/7a262295-bb98-42ce-83e6-125997614a92" />
 
 ---
 
