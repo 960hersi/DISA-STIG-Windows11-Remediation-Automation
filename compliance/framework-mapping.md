@@ -28,4 +28,3 @@ Recording issues and tracking fixes may support NIST ID.RA-01 and ID.RA-06. Docu
 - [AICPA SOC resources](https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services)
 - [DISA STIG downloads](https://public.cyber.mil/stigs/downloads/)
 
-These mappings are part of my learning exercise, not endorsements by these organizations.
