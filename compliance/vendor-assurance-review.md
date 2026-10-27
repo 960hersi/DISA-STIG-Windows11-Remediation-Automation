@@ -1,6 +1,5 @@
-# Practising a supplier security report review
+# Supplier security report review
 
-I am learning how to review a supplier's SOC 2 report. I have not reviewed a real supplier report or contract for this exercise. All results are **Not checked yet**. Confidential reports should not be posted here.
 
 | Item | What I would check | Result |
 |---|---|---|
