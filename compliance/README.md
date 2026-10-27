@@ -1,6 +1,4 @@
-# Learning security compliance through a Windows 11 lab
-
-I am new to compliance. I added this section to my existing Windows 11 STIG project to practise checking security requirements, saving evidence and tracking fixes.
+# Security compliance - Windows Remediation Automation
 
 A **control** is a safeguard, such as an audit setting. **Evidence** is the information used to show whether that safeguard works.
 
@@ -22,4 +20,3 @@ All ten results start as **Not checked yet**. This means I still need evidence; 
 4. Record problems and check them again after fixing them.
 5. Update the progress report.
 
-This is a learning project, not an ISO certification, SOC 2 audit or claim of full compliance.
