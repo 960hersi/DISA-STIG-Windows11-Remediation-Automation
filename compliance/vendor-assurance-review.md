@@ -1,22 +1,23 @@
-# Mock third-party assurance review
-## Purpose and boundary
-A separate learning exercise for SOC 2 report interpretation. No vendor, audit report, contract, auditor opinion or bridge letter has been received or reviewed. Every assessment field below remains **Not assessed**. Do not upload restricted reports to a public repository.
+# Practising a supplier security report review
 
-## Review worksheet
-| Item | Evidence required | Decision question | Result |
-|---|---|---|---|
-| Report identity | Auditor, vendor, system description | Does this cover the contracted service and legal entity? | Not assessed |
-| Report type and period | Type I date or Type II period | Does the period cover the required assurance window? | Not assessed |
-| Opinion | Auditor's opinion and qualifications | Are limitations relevant to the intended use? | Not assessed |
-| Scope | Trust services categories, locations, services | Are critical components outside scope? | Not assessed |
-| Exceptions | Tests, deviations, management response | What failed and how does it affect our service? | Not assessed |
-| Subservice organizations | Inclusive/carve-out treatment and dependencies | What additional assurance is needed? | Not assessed |
-| CUECs | Complementary user entity controls | Which customer controls must we implement and evidence? | Not assessed |
-| CSOCs | Complementary subservice organization controls where relevant | Which dependencies need additional validation? | Not assessed |
-| Bridge letter | Management letter for gap period | What has changed? Letter is not a replacement audit opinion | Not assessed |
-| Contract requirements | Security schedule, notification, access, deletion | Are contractual requirements covered by assurance evidence? | Not assessed |
+I am learning how to review a supplier's SOC 2 report. I have not reviewed a real supplier report or contract for this exercise. All results are **Not checked yet**. Confidential reports should not be posted here.
 
-## Workflow
-Record service criticality and evidence permissions. Review the report against the security schedule. Record gaps and proposed customer actions. Route questions through Procurement/Vendor Management/TPRM; those functions own vendor engagement. Escalate acceptance decisions to the risk owner.
-Complete a separate CUEC tracker: requirement, customer owner, implementation, evidence, result, gap, due date and reviewer.
-A future fictional case must be explicitly labelled fictional; do not manufacture an auditor's report or signature.
+| Item | What I would check | Result |
+|---|---|---|
+| Supplier and service | Does it cover the company and service we would use? | Not checked yet |
+| Type and dates | Is it Type I for a date or Type II for a period? Does it cover the time we need? | Not checked yet |
+| Auditor opinion | Does the auditor describe problems or limits? | Not checked yet |
+| Scope | Which systems, services and locations are included or excluded? | Not checked yet |
+| Test exceptions | What failed and how could it affect us? | Not checked yet |
+| Other providers | Does the supplier depend on another provider, and were its controls assessed? | Not checked yet |
+| CUECs | Which controls must we perform as the customer? | Not checked yet |
+| CSOCs | Which controls are expected at the supplier's own providers? | Not checked yet |
+| Bridge letter | What does management say changed since the report period? This is not a new audit opinion | Not checked yet |
+| Contract | Does the evidence address agreed security requirements and data handling? | Not checked yet |
+
+**CUECs** means Complementary User Entity Controls: controls the customer needs to perform. **CSOCs** means Complementary Subservice Organization Controls: controls expected at another provider used by the supplier.
+
+## How I would follow up
+Record missing evidence, the importance of the service and questions. Work through Procurement, Vendor Management and the third-party risk team for supplier contact. An authorized risk owner decides whether to accept risk.
+
+For each CUEC, record the requirement, owner, implementation, evidence, result, gap, due date and reviewer. I would only call the review complete after using an authorized report or a clearly labelled fictional case. I would not invent an auditor report or signature.

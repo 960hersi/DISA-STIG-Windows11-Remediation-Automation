@@ -1,23 +1,25 @@
-# Security control assessment and remediation
-This compliance extension turns the existing ten-check Windows 11 STIG project into an evidence-led assessment exercise. It documents control objectives, proposed cross-framework mappings, assessment procedures, evidence requests, findings management and reporting.
+# Learning security compliance through a Windows 11 lab
 
-## Start here
-1. Read [scope and method](scope-and-method.md).
-2. Review the ten rows in [control-assessment.csv](control-assessment.csv) and [mapping rationale](framework-mapping.md).
-3. Follow [validation-runbook.md](validation-runbook.md) on the authorized lab VM.
-4. Record artifacts in [evidence-register.csv](evidence-register.csv).
-5. Update [findings-register.csv](findings-register.csv), then [management-report.md](management-report.md).
-6. Use [exception-request.md](exception-request.md) only for an actual unmet requirement; the sample is fictional.
-7. Complete [vendor-assurance-review.md](vendor-assurance-review.md) as a separate mock SOC 2 interpretation exercise.
+I am new to compliance. I added this section to my existing Windows 11 STIG project to practise checking security requirements, saving evidence and tracking fixes.
 
-## Evidence status
-The existing README reports remediation and includes screenshot links. The existing script contains ten configuration changes. This extension reviewed their text at commit dd75ab152865361640a08901a332bb9090e01bbd; it did not execute the script, inspect the linked images, access the VM or inspect raw Tenable exports. No new pass results, scan dates, approvals or operating-effectiveness conclusions are asserted.
-All ten technical assessment results start as **Not assessed**. This is different from a failed test: required evidence has not yet been reviewed.
+A **control** is a safeguard, such as an audit setting. **Evidence** is the information used to show whether that safeguard works.
 
-## Deliverables
-- 10 assessed-scope controls with test procedures and proposed ISO/NIST/SOC 2 mappings.
-- 12 evidence-register entries linking the existing script and README to ten pending evidence bundles.
-- Four open documentation/evidence observations, not four newly discovered endpoint vulnerabilities.
-- A closure workflow, exception template, mock vendor review and management summary.
+## What I added
+- A [checklist](control-assessment.csv) for the ten controls in my script.
+- [Possible ISO NIST and SOC 2 connections](framework-mapping.md).
+- An [evidence list](evidence-register.csv) and an [issues list](findings-register.csv).
+- A [testing guide](validation-runbook.md), [exception form](exception-request.md), [progress report](management-report.md) and [practice vendor review](vendor-assurance-review.md).
 
-This is a lab portfolio, not an ISO certification, SOC 2 report, third-party audit or full-framework compliance claim.
+## What is finished
+The documents are written. The original README describes remediation and links to screenshots. This update used the text of the README and script at commit dd75ab152865361640a08901a332bb9090e01bbd. The screenshots and raw scans have not been reviewed for this update, and no new VM tests have been run.
+
+All ten results start as **Not checked yet**. This means I still need evidence; it does not mean the controls failed.
+
+## How I will use it
+1. Read [what I am checking and how](scope-and-method.md).
+2. Choose a checklist row and follow its test instructions.
+3. Save the results and update the evidence list.
+4. Record problems and check them again after fixing them.
+5. Update the progress report.
+
+This is a learning project, not an ISO certification, SOC 2 audit or claim of full compliance.

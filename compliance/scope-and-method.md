@@ -1,30 +1,32 @@
-# Scope and assessment method
-## Boundary
-One Windows 11 Azure lab VM described by the existing project. Exact VM alias, OS build, assessment date, STIG release/version and Tenable audit-file version must be recorded before testing. No production systems, payment infrastructure, customer data, enterprise ISMS, vendor controls or assessment period are included.
+# What I am checking and how
 
-## Evidence reviewed
-Text of README.md and Remediation Script at commit dd75ab152865361640a08901a332bb9090e01bbd. Historical author statements are retained as reported claims, not independently re-performed results. Screenshot URLs are pointers, not reviewed artifacts.
+## What is included
+I am checking the ten settings in my existing PowerShell script on a Windows 11 Azure lab VM. Before testing, I need to record a safe VM name, Windows version, test date, STIG version and Tenable audit-file version. I am not assessing a company, supplier or payment system.
 
-## Assessment approach
-For each control: confirm applicability against the pinned STIG; define expected state; inspect implementation; collect effective-state evidence; perform an authorized functional test where applicable; compare with expected state; record result and limitations; remediate; retest.
-Check design (could this address the stated risk?) separately from implementation (is it configured?) and operation (does it work over the relevant period?).
-A one-time lab test cannot establish Type II period-wide effectiveness.
+## My approach
+1. Read the requirement in the STIG version I am using.
+2. Write down the expected setting.
+3. Check the script and the actual VM setting.
+4. Save dated command output or scan results.
+5. Explain what that evidence shows and what it cannot show.
+6. Fix problems and test again.
 
-## Results
-Not assessed: evidence absent or not reviewed.
-Pass: dated effective-state evidence meets the scoped test, with reviewer recorded.
-Fail: reviewed evidence contradicts the defined requirement.
-Partial: some required tests meet criteria but others remain unmet.
-Not applicable: documented applicability rationale reviewed by a named reviewer.
-Do not count Not assessed as either Pass or Fail.
+I am learning to separate three questions: would the control help with the risk, is it configured, and does it actually work? A single test cannot show it worked throughout a SOC 2 Type II reporting period.
 
-## Roles and decisions
-Saeed Hersi is the portfolio author and proposed lab operator. Reviewer, control owner, risk owner and approver fields remain unassigned until a person accepts the role. Self-review is allowed for learning but must be disclosed as such; do not imply independent assurance.
+## Results I will use
+- **Not checked yet:** I have not reviewed enough evidence.
+- **Pass:** Dated evidence meets the specific test and the reviewer is recorded.
+- **Fail:** Evidence shows the requirement is not met.
+- **Partly meets the test:** Some required parts work and others do not.
+- **Not applicable:** The control does not apply, with a recorded reason and reviewer.
 
-## Prioritization
-Use documented likelihood (1-3) times impact (1-3): 1-2 Low, 3-4 Medium, 6-9 High. These are local lab ratings, not DISA CAT ratings or CVSS.
-Documentation observations use action priority, not invented vulnerability severity.
+Missing evidence is not a pass or fail. An approved exception does not turn a failed control into a pass.
 
-## Closure
-A finding closes only when remediation evidence, retest outcome, test date and reviewer are recorded, or an authorized time-limited exception is linked. An exception does not turn a failed control into a pass.
-Keep evidence private until redacted. Publish aliases instead of tenant IDs, public IPs, usernames, tokens or unredacted scan inventories.
+## Responsibilities and follow-up
+I am the project author. Owner, reviewer and approver fields stay unassigned until someone takes the role. If I review my own work, I will say so rather than call it independent assurance.
+
+For practice, I can rate likelihood and impact from 1 to 3, explain them and multiply: 1-2 Low, 3-4 Medium, 6-9 High. This is a lab method, not a DISA category or CVSS score. The current issues use follow-up priority because they are missing information, not confirmed new vulnerabilities.
+
+To close an issue, I need the fix, retest evidence, date and reviewer. An authorized risk owner decides whether to accept an exception.
+
+Keep original evidence private. Remove usernames, IPs, tenant information and secrets from public copies. Record what was removed and hash original and edited copies separately.

@@ -8,7 +8,7 @@
 
 ## Compliance assessment extension
 
-The existing technical project now includes a [security control assessment and remediation package](compliance/README.md): ten control tests, proposed ISO/IEC 27001 Annex A, NIST CSF 2.0 and SOC 2 mappings, evidence and findings registers, an exception workflow, a management report and a mock vendor-assurance worksheet. The original historical results below are author-reported; the extension does not claim fresh runtime validation or certification.
+I am expanding this project to learn security compliance. The [compliance learning package](compliance/README.md) includes a checklist for ten controls, proposed ISO/NIST/SOC 2 mappings, evidence and issues lists, a testing guide, an exception example and a practice supplier review. The documents are written, but the new checks still need VM and scan evidence. This is a lab exercise, not a certification or audit.
 
 ## Overview
 
@@ -213,3 +213,4 @@ The assessment successfully demonstrated:
 # Summary
 
 This project demonstrates a practical Windows 11 DISA STIG remediation workflow using PowerShell automation and Tenable Vulnerability Management. The assessment focused on identifying failed compliance checks, implementing security hardening configurations, validating remediation success, and documenting the process using reproducible automation techniques.
+
