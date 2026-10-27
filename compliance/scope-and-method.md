@@ -1,7 +1,7 @@
 # What I am checking and how
 
 ## What is included
-I am checking the ten settings in my existing PowerShell script on a Windows 11 Azure lab VM. Before testing, I need to record a safe VM name, Windows version, test date, STIG version and Tenable audit-file version. I am not assessing a company, supplier or payment system.
+I am checking the ten settings in my existing PowerShell script on a Windows 11 Azure lab VM. Before testing, I need to record a safe VM name, Windows version, test date, STIG version and Tenable audit-file version.
 
 ## My approach
 1. Read the requirement in the STIG version I am using.
@@ -11,7 +11,7 @@ I am checking the ten settings in my existing PowerShell script on a Windows 11 
 5. Explain what that evidence shows and what it cannot show.
 6. Fix problems and test again.
 
-I am learning to separate three questions: would the control help with the risk, is it configured, and does it actually work? A single test cannot show it worked throughout a SOC 2 Type II reporting period.
+Three main questions: would the control help with the risk, is it configured, and does it actually work? A single test cannot show it worked throughout a SOC 2 Type II reporting period.
 
 ## Results I will use
 - **Not checked yet:** I have not reviewed enough evidence.
