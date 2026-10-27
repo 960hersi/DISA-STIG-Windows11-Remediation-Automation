@@ -6,6 +6,10 @@
 
 ---
 
+## Compliance assessment extension
+
+The [compliance learning package](compliance/README.md) includes a checklist for ten controls, proposed ISO/NIST/SOC 2 mappings, evidence and issues lists, a testing guide, an exception example and a practice supplier review. The documents are written, but the new checks still need VM and scan evidence.
+
 ## Overview
 
 This project demonstrates the process of identifying, remediating, validating, and documenting Windows 11 DISA STIG compliance findings using PowerShell automation and Tenable Vulnerability Management.
@@ -209,3 +213,4 @@ The assessment successfully demonstrated:
 # Summary
 
 This project demonstrates a practical Windows 11 DISA STIG remediation workflow using PowerShell automation and Tenable Vulnerability Management. The assessment focused on identifying failed compliance checks, implementing security hardening configurations, validating remediation success, and documenting the process using reproducible automation techniques.
+
